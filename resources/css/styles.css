@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Spirax');
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    font-family: 'Spirax', cursive;
+    font-size: 2rem;
+}
+
+#searchbox {
+    text-align: center;
+    margin-top: 2rem;
+}
