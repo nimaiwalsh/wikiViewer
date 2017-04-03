@@ -10,6 +10,12 @@ h2 {
     font-size: 2rem;
 }
 
+h3 {
+    font-family: Verdana;
+    font-weight: 300;
+    color: red;
+}
+
 #searchbox {
     text-align: center;
     margin-top: 2rem;
