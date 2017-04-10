@@ -7,14 +7,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Site content to update including keywords">
-        
         <link rel="stylesheet" type="text/css" href="vendors/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendors/css/grid.css">
-        <!--<link rel="stylesheet" type="text/css" href="vendors/css/ionicons.css">-->
+        <link rel="stylesheet" type="text/css" href="vendors/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="vendors/css/animate.css">
         <link rel="stylesheet" type="text/css" href="resources/css/styles.css">
         <link rel="stylesheet" type="text/css" href="resources/css/queries.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,300,100,300italic" rel="stylesheet" type="text/css">
         
         <title>Wikipedia Viewer</title>
     
@@ -22,24 +19,25 @@
     
     <body>
         
-        <section id="searchbox">
+        <section id="searchbox" class="">
             <h2>Search Wikipedia</h2>
-            <input  type="search" name="searchInput" value="">
-            <button id="searchBtn">Search</button>
+            <div class="search">
+                <input  type="search" name="searchInput" value="" placeholder="Search">
+                <i class="icon ion-ios-search"></i>
+                <button id="searchBtn">Go</button>
+            </div>
+            <p><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Find me a random article</a></p>    
         </section>
 
         <article id="rearchResults">
-            <ul>
-                
+            <ul>           
             </ul>
-        </article>
-        
-        <footer>
-        
-        
-        </footer>
-        
+        </article>  
 
+    <footer>
+        
+        
+    </footer>
         
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

@@ -1,3 +1,5 @@
+/*  Add links to articles */
+
 /*Array to store the returned searchResults*/
 let pageSnippits = [];
 let wikiApiCall = '';
@@ -33,19 +35,30 @@ function apiRequest() {
             console.log('Fetch Error: ', error);
         });
 } 
+/*Transition the search section to the top of the page*/
+function animateSearch() {
+    const searchSection = document.querySelector('section');
+    if (searchSection.className.includes('top')) {
+        return;
+    }
+    return searchSection.classList.add('top');
+}
 
 /* VIEW Populate the DOM with search results*/
-function displayData() {
-    /*Delete list if of search results if it exists*/
+function displayData() { 
     const allLi = document.querySelector('article > ul');
+    /*Delete list if of search results if it exists*/
     allLi.innerHTML = '';
     
     /*Create a list of returned search results*/
-    pageSnippits.forEach(function(page) {
-        const searchUlOut = document.querySelector('article > ul');
-        const searchLiOut = document.createElement('li');
-        searchLiOut.innerHTML = '<h3>' + page.title + '</h3>' + '<p>' + page.extract + '</p>';
-        searchUlOut.appendChild(searchLiOut);
+     pageSnippits.forEach(function(page) {
+         const searchUlOut = document.querySelector('article > ul');
+         const searchLiOut = document.createElement('li');
+         searchLiOut.innerHTML = '<h3>' + page.title + '</h3>' + '<p>' + page.extract + '</p>';
+         searchUlOut.appendChild(searchLiOut);
+         setTimeout(function() {
+             searchLiOut.classList.add('animated', 'fadeIn');
+         }, 10);
     });
 }
 
@@ -54,15 +67,18 @@ function setUpEventListeners() {
         const searchButton = document.getElementById('searchBtn');
         searchButton.addEventListener('click', function() {
             updateRequestURL();
+            animateSearch();
             apiRequest();
         });
 
         /*Run displayData when Enter is pressed*/
         window.addEventListener('keydown', function(e) {
+            console.log('enter pressed');
             if (e.keyCode != 13) {
                 return;
             }
             updateRequestURL();
+            animateSearch();
             apiRequest();
         });
     }

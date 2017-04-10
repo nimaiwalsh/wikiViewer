@@ -1,22 +1,115 @@
-@import url('https://fonts.googleapis.com/css?family=Spirax');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+/*Universal sizing of border-box*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 16px;
+    background-color: #0D0B0C;
+    color: white;
 }
 
 h2 {
-    font-family: 'Spirax', cursive;
-    font-size: 2rem;
+    font-weight: 300;
+    font-size: 2.31rem;
+    margin: 1rem;
 }
 
 h3 {
-    font-family: Verdana;
-    font-weight: 300;
-    color: red;
+    font-family: 'Lato', sans-serif;
 }
 
-#searchbox {
+section {
+    /*Center vert/horizontal middle of page*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    margin-top: 2rem;
+    transition:all 1s;
+    margin-bottom: 2rem;
+    }
+
+section.top {
+    top: 1%;
+    transform: translate(-50% , 0);
+}
+
+/*Search box styles*/
+.search {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.search input {
+    padding: 0.7rem 2.5rem;
+    border:  #EE3233 solid 3px;
+    border-radius: 35px;
+    background: transparent;
+    color: white;
+}
+
+.search input:focus {
+    outline: none;
+}
+.search i {
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    font-size: 2.2rem;
+}
+
+.search button {
+    padding: 0.56rem;
+    border-radius: 45%;
+    border: none;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+}
+
+.search button:focus {
+    outline: none;
+}
+
+section a:link, a:visited {
+    color: #9c0d0e;
+    text-decoration: none;
+} 
+
+section a:hover, a:active {
+    color: #EE3233;
+    text-decoration: none;
+} 
+
+
+
+/*Search resuls*/
+article {
+    position: relative;
+    margin: 13rem auto 0 auto;
+    width: 80%;
+}
+
+article ul {
+    padding: 0;
+}
+
+article ul li {
+    list-style: none;
+    border-bottom:#EE3233 solid 2px;
+    opacity: 0;
+}
+
+article ul li p {
+    font-size: 1rem;
+    line-height: 150%;
 }
