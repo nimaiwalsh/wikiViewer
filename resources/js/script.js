@@ -1,5 +1,4 @@
-/*  Add links to articles */
-
+/* Developed by Nimai Walsh - www.nimaiwalsh.com */
 /*Array to store the returned searchResults*/
 let pageSnippits = [];
 let wikiApiCall = '';
@@ -38,6 +37,10 @@ function apiRequest() {
 /*Transition the search section to the top of the page*/
 function animateSearch() {
     const searchSection = document.querySelector('section');
+    const searchInput = document.querySelector('input');
+    if (searchInput.value === '') {
+        return;
+    }
     if (searchSection.className.includes('top')) {
         return;
     }

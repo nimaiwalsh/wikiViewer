@@ -74,6 +74,12 @@ section.top {
     position: absolute;
     top: 5px;
     right: 6px;
+    background-color: #CEEBFB;
+}
+
+.search button:hover {
+    background-color: #66A7C5;
+    color: white;
 }
 
 .search button:focus {
@@ -90,13 +96,12 @@ section a:hover, a:active {
     text-decoration: none;
 } 
 
-
-
 /*Search resuls*/
 article {
     position: relative;
     margin: 13rem auto 0 auto;
     width: 80%;
+    height: auto;
 }
 
 article ul {
@@ -112,4 +117,30 @@ article ul li {
 article ul li p {
     font-size: 1rem;
     line-height: 150%;
+}
+
+/*Social footer*/
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: auto;
+}
+
+footer ul {
+    padding: 0 20px; 
+}
+
+footer ul li {
+    list-style: none;
+    font-size: 2rem;
+}
+
+footer i {
+    color: white;
+}
+
+footer i:hover, i:active {
+    color: #EE3233;
 }
